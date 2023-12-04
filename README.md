@@ -9,6 +9,8 @@ of brain tumours is time-intensive and requires specialized knowledge of the bra
 Imaging (MRI) scans. This entails a multi-class classification problem to which we hope to apply
 machine learning techniques in new and insightful ways.
 
+![Rates](figures/tumor_rates.png)
+
 # Dataset 
 Our chosen dataset is the figshare brain tumour dataset [3]. This dataset is available at [kaggle](https://www.kaggle.com/datasets/ashkhagan/figshare-brain-tumor-dataset/). The dataset contains 3,064 slices of MRI scans from patients at Nanfang Hospital, Guangzhou, China. The slices were taken in the sagittal, axial, and coronal planes. 
 
