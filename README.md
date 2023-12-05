@@ -117,7 +117,7 @@ To open the notebook in Google Colab:
 
 1. File > Open Notebook 
 2. Open Notebook > From Github
-3. Paste the repository url () in the search bar and click `brain_tumor_classification.ipynb` to open the notebook.
+3. Paste the repository url (https://github.com/kworathur/CV-Capstone/tree/main) in the search bar and click `brain_tumor_classification.ipynb` to open the notebook.
 4. Runtime > Change Runtime Type > T4 GPU
 5. Runtime > Run All
 6. The second cell contains the following code: 
