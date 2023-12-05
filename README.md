@@ -52,6 +52,7 @@ The model outputs a **softmax** vector of probabilities, where each probabilitit
 ![Listing of Model Layers](figures/model_description.png)
 
 As we can see, the model has a much smaller capacity than models such as VGG16, which has 138 million parameters. The small size of our model makes it possible to be deployed on a mobile phone or other inexpensive hardware. 
+
 ## Problems we could not solve
 
 When we planned our project, we aimed to explain the decisions of our model by generating  **counterfactual** images. Counterfactual images help us answer questions such as:
