@@ -108,6 +108,7 @@ An area of concern is the second row, which shows that 45 of the true Glioma
 tumors were incorrectly classified as Meningioma tumors. This means that out of
 the three tumor classes, Glioma has the lowest specificity or true positive rate.
 
+\pagebreak 
 
 # Individual Contributions 
 
