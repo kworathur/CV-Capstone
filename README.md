@@ -70,6 +70,7 @@ When a model and a neurologist differ in their opinions about a scan, how can we
 
 ![Saliency Maps](figures/saliency_maps.png)
 
+Lighter pixels correspond to regions of the image where the model is more sensitive to the input. We expect lighter pixels to be conentrated near the tumour if the model was most heavily influenced by the shape and location of the tumour. However, this is not the case, as we can see that the model is also highly sensitive to the background of the image. One explanation for this result is that the pixels in the background are fairly stable from image to image, so the model can afford to be heavily dependent on these pixels without sacrificing classification its accuracy.
 # Evaluation Results 
 
 We trained our model using the NVIDIA T4 GPU available in Colab. We stopped training if the validation accuracy did not improve for 11 consecutive epochs. 
@@ -86,7 +87,21 @@ The procedure for evaluating the model using subject-wise cross validation is as
 
 We obtained an average test accuracy of $91.3\%$. This shows the model can differentiate between the different tumor classes. However, there is strong evidence the model may misclassify tumors when deployed in the real world. 
 
-While the model performs well on the provided test set, we must consider issues relating to model robustness. This model was trained on MRI slices originating from a single hospital. CNN models are capable  of learning patterns unique to a specific imaging technology. Future experiments should subject the model to scans from different hospitals to ensure the model's prediction accuracy does not degrade.
+
+The figure below visualizes the performance of the model on the test set using a
+confusion matrix. The confusion matrix allows us to easily determine if two
+classes are being confused by the model. Label 0 corresponds to meningioma
+tumors, label 1 corresponds to glioma tumors, and label 2 corresponds to
+pituitary tumors. The values along the diagonal correspond to true positive count
+for each of the classes.
+
+
+![Confusion Matrix for Test Set](figures/confusion_matrix.png)
+
+An area of concern is the second row, which shows that 45 of the true Glioma
+tumors were incorrectly classified as Meningioma tumors. This means that out of
+the three tumor classes, Glioma has the lowest specificity or true positive rate.
+
 
 # Individual Contributions 
 
