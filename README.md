@@ -1,8 +1,8 @@
 # Capstone Project Documentation 
 
-Authors: Laura Madrid, Lucas Noritomi-Hartwig, Keshav Worathur
+**Authors:** Laura Madrid, Lucas Noritomi-Hartwig, Keshav Worathur
 
-Project Repository: https://github.com/kworathur/CV-Capstone/tree/main
+**Project Repository:** https://github.com/kworathur/CV-Capstone/tree/main
 
 December 5, 2023
 
@@ -51,7 +51,7 @@ The model outputs a **softmax** vector of probabilities, where each probabilitit
 
 ![Listing of Model Layers](figures/model_description.png)
 
-As we can see, the model has a much smaller capacity than models such as VGG16, which has 138 million parameters. The small size of our model makes it possible to be deployed on a mobile phone or other inexpensive hardware. 
+As we can see, the model has a much smaller capacity than models such as VGG16, which has 138 million parameters. The small size of our model makes it possible to be deployed on a mobile phone or other inexpensive hardware.
 
 ## Problems we could not solve
 
@@ -59,9 +59,9 @@ When we planned our project, we aimed to explain the decisions of our model by g
 
 > How would this scan of a patient with a Meningioma tumor be different if the patient instead had a Glioma tumor according to the model?
 
-Asking such questions help us as humans understand what features in the scan cause the model to choose one class over another. This in turn allows us to gain more insight into the model's decision making process. 
+Asking such questions help us as humans understand what features in the scan cause the model to choose one class over another. This in turn allows us to gain more insight into the model's decision making process.
 
-To implement this idea, we considered using Generative Adversarial Networks (GANs), for generating such counterfactual images. However, the complexity that lies in training a GAN from scratch persuaded us to consider alternative approaches.
+To implement this idea, we considered using Generative Adversarial Networks (GANs), for generating such counterfactual images. However, the complexity that lies in training a GAN from scratch persuaded us to consider an alternative approach like saliency maps.
 
 ## Novel Contribution
 
@@ -114,12 +114,13 @@ the three tumor classes, Glioma has the lowest specificity or true positive rate
 
 Throughout the semester, we worked as a group to develop our project and address issues as they arised. All members contributed equally to the project, with individual contributions listed below:
 
+Laura Madrid explored GANs for producing counterfactual images and the vanilla gradient method of producing saliency maps. She also read related literature to understand the grid-like pattern of the original saliency map.
 
-Laura Madrid explored novel extensions to our project, such as GANs for producing counterfactual images and the vanilla gradient method of producing saliency maps.
-
-Lucas Noritomi-Hartwig selected the dataset and performed data pre-processing. He also researched novel extensions to our project and wrote the code for saliency maps.
+Lucas Noritomi-Hartwig selected the dataset and performed data pre-processing.
 
 Keshav Worathur researched related works pertaining to our problem and set up the project repository. He wrote code for the data pre-processing pipeline and trained the model.
+
+Collectively, we wrote the code for model, we wrote the code for the saliency maps, made the progress reports, made the progress presentation, worked on the final poster and met frequently to work on all aspects of the project on a weekly basis throughout the semester.
 
 
 # References
@@ -131,6 +132,10 @@ mentation and classification algorithms,” J Imaging, vol. 7, Sept. 2021.
 [3] Milica M Badža and Marko Č Barjaktarović.
 Classification of brain tumors from mri images using a convolutional neural network.
 Applied Sciences, 10(6):1999, 2020.
+
+[4] Yusuf Brima and Marcellin Atemkeng.
+Visual interpretable and explainable deep learning models for brain tumor mri and covid-19 chest x-ray images.
+2023.
 
 # Workflow
 
