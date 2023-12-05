@@ -63,14 +63,20 @@ Asking such questions help us as humans understand what features in the scan cau
 
 To implement this idea, we considered using Generative Adversarial Networks (GANs), for generating such counterfactual images. However, the complexity that lies in training a GAN from scratch persuaded us to consider alternative approaches.
 
-
 ## Novel Contribution
 
 When a model and a neurologist differ in their opinions about a scan, how can we reconcile these differences? Our novel contribution is the use of saliency maps for interpreting our classifier's decisions. Our saliency maps are computed by taking partial derivates of the predicted class with respect to each pixel of the original image.
 
+\pagebreak 
+
 ![Saliency Maps](figures/saliency_maps.png)
 
 Lighter pixels correspond to regions of the image where the model is more sensitive to the input. We expect lighter pixels to be conentrated near the tumour if the model was most heavily influenced by the shape and location of the tumour. However, this is not the case, as we can see that the model is also highly sensitive to the background of the image. One explanation for this result is that the pixels in the background are fairly stable from image to image, so the model can afford to be heavily dependent on these pixels without sacrificing classification its accuracy.
+
+
+\pagebreak
+
+
 # Evaluation Results 
 
 We trained our model using the NVIDIA T4 GPU available in Colab. We stopped training if the validation accuracy did not improve for 11 consecutive epochs. 
