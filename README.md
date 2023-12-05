@@ -73,6 +73,7 @@ When a model and a neurologist differ in their opinions about a scan, how can we
 
 Lighter pixels correspond to regions of the image where the model is more sensitive to the input. We expect lighter pixels to be conentrated near the tumour if the model was most heavily influenced by the shape and location of the tumour. However, this is not the case, as we can see that the model is also highly sensitive to the background of the image. One explanation for this result is that the pixels in the background are fairly stable from image to image, so the model can afford to be heavily dependent on these pixels without sacrificing classification its accuracy.
 
+Our group implemented a addition of Gaussian noise to the images, to test the saliency maps of the model on perturbed images. This showed us how the model was relatively robust against images with noise, especially around the typically black corners.
 
 \pagebreak
 
@@ -114,13 +115,13 @@ the three tumor classes, Glioma has the lowest specificity or true positive rate
 
 Throughout the semester, we worked as a group to develop our project and address issues as they arised. All members contributed equally to the project, with individual contributions listed below:
 
-Laura Madrid explored GANs for producing counterfactual images and the vanilla gradient method of producing saliency maps. She also read related literature to understand the grid-like pattern of the original saliency map.
+Laura Madrid explored GANs for producing counterfactual images, worked towards implementing the Grad-CAM, improving our understanding with saliency maps, and the vanilla gradient method of producing saliency maps. She also read related literature to understand the grid-like pattern of the original saliency map.
 
-Lucas Noritomi-Hartwig selected the dataset and performed data pre-processing.
+Lucas Noritomi-Hartwig explored different datasets, testing existing models, and determined which problems would be reasonable enought given the time constraint. He implemented the perturbation of the images via Gaussian noise to allow the weights of the model to better reflect the critical sections of the images.
 
-Keshav Worathur researched related works pertaining to our problem and set up the project repository. He wrote code for the data pre-processing pipeline and trained the model.
+Keshav Worathur researched related works pertaining to our problem and set up the project repository. He implemented the data pre-processing pipeline, augmentation, and trained the model. He also found that the dataset required individual patient IDs, otherwise the model may risk overfitting.
 
-Collectively, we wrote the code for model, we wrote the code for the saliency maps, made the progress reports, made the progress presentation, worked on the final poster and met frequently to work on all aspects of the project on a weekly basis throughout the semester.
+Collectively, we implemented the model, the saliency maps, wrote the progress reports, the progress presentation, the final poster. We adjusted the model to fix the model size (a discrepency in the paper). We all met frequently throughout the term to work on all aspects of the project on a weekly basis.
 
 
 # References
