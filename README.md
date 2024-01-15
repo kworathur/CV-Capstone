@@ -168,3 +168,6 @@ To open the notebook in Google Colab:
     This waits until the user uploads their kaggle API key, named kaggle.json. The notebook runs without user input, first visualizing the data then training the model. The saved model is saved to best_model.h5
 
 7. If you would only like to view the saliency maps, locate the section titles "Load the Best Model", and upload the pretrained model `best_model.h5` (found in this repository). Then, run the remaining cells to view the saliency maps. 
+
+# Presentation Poster
+![final poster](figures/final_poster.png)
